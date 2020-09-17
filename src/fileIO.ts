@@ -1,7 +1,3 @@
-/*
-  source origin: https://deno.land/manual/examples/unix_cat
-*/
-
 async function printFileContents(args: Array<string>) {
   const fileNames = args.length === 0 ? ["app.ts"] : args;
 
