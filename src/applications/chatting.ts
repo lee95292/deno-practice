@@ -20,7 +20,8 @@ class Chatting implements Example {
     const listener = Deno.listen({ port });
     console.log(`server list now running at http://localhost:${port}`);
     for await (const conn of listener) {
-      Deno.copy(conn, conn);
+        
+        Deno.copy(conn, conn);
     }
 
     return 1;
