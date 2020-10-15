@@ -1,7 +1,7 @@
 // run command : deno run --allow-net --allow-write --allow-read --allow-plugin --unstable  ./src/databaseConnection.ts
 import { MongoClient } from "https://deno.land/x/mongo@v0.12.1/mod.ts";
 
-const client = new MongoClient();
+const client = new (MongoClient as any)();
 
 await client.connectWithUri("mongodb://localhost:27017");
 
